@@ -1,0 +1,125 @@
+.main {
+	min-height: 912rem;
+	background: url(/img/main_bg.png) top no-repeat;
+	background-size: auto 100%;
+	padding: 115rem 0 150rem 0;
+	color: #fff;
+	&__header {
+		&-logo {
+			width: 39rem;
+			min-width: 39rem;
+			margin-right: 30rem;
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+		&-nav {
+			ul {
+				display: flex;
+				list-style: none;
+				li:not(:last-child) {
+					margin-right: 35rem;
+				}
+				a {
+					position: relative;
+					display: inline-flex;
+					color: #fff;
+					font-size: 18rem;
+					&:after {
+						content: '';
+						display: block;
+						position: absolute;
+						top: 100%;
+						height: 1px;
+						width: 100%;
+						background: $brown;
+						margin-top: 6rem;
+						transform: scale(0,1);
+						transition: ease 0.2s;
+					}
+					&:hover {
+						&:after {
+							transform: scale(1);
+						}
+					}
+				}
+				li.current-menu-item {
+					a:after {
+						transform: scale(1);
+					}
+				}
+			}
+		}
+	}
+	&__content {
+		margin-top: 200rem;
+		max-width: 500rem;
+  		text-shadow: 0px 3px 11.7px rgba(0, 0, 1, 0.11);
+	}
+	&__desc {
+		font-size: 25rem;
+		margin-top: 30rem;
+	}
+}
+
+@include max-screen($large_mobile) {
+	.main {
+		min-height: inherit;
+		padding: 30px 0 100px 0;
+		background-position: 55% 0 !important;
+		&__header {
+			justify-content: center;
+			&-logo {
+				width: 39px;
+				min-width: 39px;
+				margin-right: 0;
+			}
+			&-nav {
+				padding-top: 12px;
+				width: 100%;
+				ul {
+					flex-wrap: wrap;
+					justify-content: center;
+					li:not(:last-child) {
+						margin-right: 15px;
+					}
+					li {
+						margin-top: 8px;
+						a {
+							font-size: 16rem;
+						}
+						a:after {
+							display: none;
+						}
+						a:hover, &.current-menu-item a {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+		&__content {
+			margin-top: 70px;
+			max-width: 300rem;
+		}
+		&__desc {
+			font-size: 20rem;
+			br {
+				display: none;
+			}
+		}
+	}
+}
+
+@include max-screen(359px) {
+	.main {
+		padding-bottom: 70px;
+		&__content {
+			margin-top: 50px;
+		}
+		&__header {
+			transform: translateY(-10px);
+		}
+	}
+}

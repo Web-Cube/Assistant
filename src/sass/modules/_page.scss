@@ -1,0 +1,46 @@
+.page {
+	background: url(/img/house.jpg) 50% 120% no-repeat;
+	&__head {
+		padding: 65rem 0 95rem 0;
+		text-align: center;
+	}
+	.biography {
+		padding-bottom: 160rem;
+	}
+}
+
+.breadcrumbs {
+	font-size: 12px;
+	margin-bottom: 20rem;
+	a {
+		color: inherit;
+	}
+}
+
+.contact-page {
+	margin-top: -40rem;
+	padding-bottom: 85rem;
+	&__desc {
+		font-size: 18rem;
+		text-align: center;
+		font-weight: 100;
+	}
+	.form {
+		margin-top: 110rem;
+		padding-top: 1px;
+		&__head {
+			margin-top: -40rem;
+		}
+	}
+}
+
+@include max-screen($large_mobile) {
+	.page {
+		&__head {
+			padding: 40px 0 50px 0;
+		}
+		.biography {
+			padding-bottom: 80px;
+		}
+	}
+}

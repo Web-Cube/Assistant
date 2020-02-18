@@ -1,0 +1,140 @@
+.biography {
+	&_main {
+		padding: 50rem 0 50rem 0;
+		.biography__list {
+			padding-top: 30rem;
+		}
+	}
+	&__item:not(:last-child) {
+		margin-bottom: 50rem;
+	}
+	&__head {
+		margin-bottom: 30rem;
+	}
+	&__foto {
+		width: 80px;
+		display: block;
+		border-radius: 100%;
+		margin-bottom: 20rem;
+	}
+	&__title {
+		font-size: 24rem;
+		font-weight: 700;
+		margin-bottom: 18rem;
+	}
+	&__desc {
+		line-height: 18rem;
+		p {
+			font-size: 18rem;
+			font-weight: 300;
+			line-height: 22rem;
+			&:not(:last-child) {
+				margin-bottom: 18rem;
+			}
+		}
+	}
+	&__right {
+		position: relative;
+		float: right;
+		width: 49%;
+		margin-left: 40rem;
+	}
+	&__story {
+		padding: 100rem 0 100rem 70rem;
+		margin-top: -30rem;
+		color: #fff;
+		position: relative;
+		font-family: 'charterc';
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 200%;
+			height: 100%;
+			background: #2f3542;
+		}
+		&-icon, &-desc {
+			position: relative;
+		}
+		&-icon, &-end {
+			color: $brown;
+		}
+		&-icon {
+			font-size: 100rem;
+			line-height: 40rem;
+			margin-left: -3rem;
+		}
+		&-desc {
+			font-size: 25rem;
+			line-height: 35rem;
+		}
+	}
+	&__btn {
+		width: 230rem;
+		margin-top: 80rem;
+	}
+	&__arrow {
+		margin-top: 40rem;
+	}
+	&__img {
+		max-width: none;
+		height: 578rem;
+	}
+}
+
+@include max-screen($small_tablet) {
+	.biography {
+		&__right {
+			&_foto {
+				width: 100%;
+				float: none;
+				margin-left: 0;
+				margin-top: 0;
+				margin-bottom: 50rem;
+			}
+		}
+		&__img {
+			height: auto;
+			max-width: 100%;
+		}
+	}
+}
+
+@include max-screen($large_mobile) {
+	.biography {
+		&__right {
+			width: 100%;
+			float: none;
+			margin-left: 0;
+			margin-top: 0;
+		}
+		&__story {
+			padding: 50px 20px 30px 20px;
+			margin-bottom: 50rem;
+			&:before {
+				width: 100%;
+			}
+			&-desc {
+				font-size: 18rem;
+				line-height: 25rem;
+			}
+		}
+		&__btn {
+			margin-top: 40px;
+		}
+		&__desc {
+			font-size: 16rem;
+			line-height: 20rem;
+			p {
+				font-size: 16rem;
+				line-height: 20rem;
+			}
+		}
+		&__head {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 10px;
+		}
+	}
+}

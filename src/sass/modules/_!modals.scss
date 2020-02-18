@@ -1,0 +1,106 @@
+
+.mfp-bg{
+	background-color: rgb(0, 0, 0);
+	opacity: 0.502;	
+}
+
+.mfp-wrap {
+	overflow-x: hidden;
+	overflow-y: auto !important;
+}
+
+.modals{
+	position: relative;
+	margin: auto;
+	width: 100%;
+	padding: 45rem 20rem 30rem 30rem;
+	max-width: 820rem;
+	background-color: #fff;
+	cursor: auto!important;	
+	font-size: 16rem;
+	border-radius: 3px;
+	&__close {
+		width: 20rem;
+		position: absolute;
+		right: 15rem;
+		top: 15rem;
+		cursor: pointer;
+	}
+	&__polity {
+		max-height: 60vh;
+		overflow-x: hidden;
+		overflow-y: visible;
+		padding-bottom: 20rem;
+		padding-right: 10rem;
+		border-radius: 3px;
+		&::-webkit-scrollbar { width: 8rem; height: 8rem; background: #f6f6f6;}
+		&::-webkit-scrollbar-thumb {  background-color: $brown; border-radius: 3px;}
+		p {
+			margin-top: 15rem;
+		}
+	}
+	&__title, &__desc {
+		text-align: center;
+	}
+	&__title {
+		font-size: 36rem;
+	}
+	&__desc {
+		font-size: 20rem;
+		margin-top: 10rem;
+		padding-bottom: 15rem;
+	}
+}
+.mfp-bg{
+	opacity: 0;
+	transition: all .5s ease; 
+	
+
+
+	&.mfp-ready{
+		opacity: 0.502;	
+	}
+
+	&.mfp-removing{
+		opacity: 0;
+	}
+}
+
+.css-modal-animate{
+	// start state
+	
+	overflow: hidden;
+
+	.modals, .mfp-figure{
+		transition: all .5s ease; 
+		opacity: 0;
+		transform: translateY(30px);
+	}
+
+	// animate in
+	&.mfp-ready{
+		.modals, .mfp-figure{
+			transform: translate(0, 0);
+			opacity: 1;
+		}
+	}
+
+	// animate out
+	&.mfp-removing{	
+		.modals, .mfp-figure{
+			opacity: 0;
+		}
+	}
+
+}
+
+@include max-screen($large_mobile) {
+	.modals {
+		padding-left: 20rem;
+		&__polity {
+			h2 {
+				font-size: 20px;
+			}
+		}
+	}
+}

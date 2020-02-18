@@ -1,0 +1,47 @@
++b.page
+	+e.wrap.wrap
+		+e.head
+			+b.breadcrumbs
+				a(href="main.html") Главная 
+				| / Приёмная
+			.flex.flex_center
+				+e.head-title.title
+					h1.h2 Приёмная
+		+b.contact-page
+			+e.desc
+				| Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач. Товарищи! начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке соответствующий условий активизации. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции требуют от нас анализа соответствующий условий активизации.
+			+b.FORM.form(action="app/mail")
+				+e.head
+					+e.head-title ОБЩЕСТВЕННАЯ ПРИЕМНАЯ
+					+e.A.phone(href="tel:84951234567")
+						+e.phone-icon
+							+icon('phone','0 0 578.106 578.106')
+						+e.phone-text
+							| 8 (495) 123-45-67
+					br
+					+e.email(href="mailto:mail@gmail.com") mail@gmail.com
+				+e.desc
+					| По вашим вопросам заполните форму ниже
+				+e.row.flex
+					+e.column
+						+e.field
+							+e.INPUT.input(name="name", type="text", placeholder="ФИО*")
+						+e.field
+							+e.INPUT.input(name="email", type="email", placeholder="E-mail*")
+						+e.field
+							+e.INPUT.input(name="index", type="text", placeholder="Индекс*")
+						+e.field
+							+e.INPUT.input(name="phone", type="tel", placeholder="Телефон*")
+					+e.column
+						+e.field
+							+e.INPUT.input(name="adress", type="text", placeholder="Адрес*")
+						+e.field
+							+e.TEXTAREA.textarea(name="mess", placeholder="Текст обращения* (минимум 100 символов)")
+						+e.info * - обязательные поля
+						+e.polity
+							| Нажимая кнопку "Отправить", Вы принимаете условия 
+							br
+							a.js-modal(href="#polity") политики конфиденциальности 
+							| сайта.
+						+e.BUTTON.btn.btn(type="submit") Отправить
+				

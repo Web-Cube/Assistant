@@ -1,0 +1,58 @@
+
+.content p,.p,
+.content li, .li{
+	font-size: 16rem;
+	font-weight: 100;
+}
+
+.content ul, .content ol{
+
+}
+
+.content b,.b{
+}
+
+.content a,.a{
+
+}
+
+.h1, .content h1,
+.h2, .content h2,
+.h3, .content h3,
+.h4, .content h4,
+.h5, .content h5,
+.h6, .content h6,{
+	font-family: 'charterc';
+	font-weight: bold;
+}
+
+.h1, .content h1{
+	font-size: 70rem;
+	line-height: 1;
+}
+
+.h2, .content h2{
+	font-size: 28rem;
+	@include letter-spacing(28,10);
+}
+
+.h3, .content h3{
+	font-size: 20rem;
+}
+
+.h4, .content h4{
+}
+
+.h5, .content h5{
+}
+
+
+.h6, .content h6{
+}	
+
+
+@include max-screen($large_mobile) {
+	.h1, .content h1 {
+		font-size: 50rem;
+	}
+}

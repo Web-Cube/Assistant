@@ -1,0 +1,20 @@
+$brown: #b49147;
+
+@function toem($num, $parent: 16) {
+	@return $num/$parent+em;
+}
+
+@mixin letter-spacing($x, $y) {
+	letter-spacing: toem(($x*$y)/1000,$x);
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &:-moz-placeholder           { @content; }
+  &::-moz-placeholder          { @content; }
+  &:-ms-input-placeholder      { @content; }  
+}
+
+@import "mixins/**/*.scss";
+@import "defaults/**/*.scss";
+@import "modules/**/*.scss";

@@ -1,0 +1,11 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Главная'
+
+block content
+	include ../layouts/main
+	.house-bg
+		include ../layouts/last-news
+		include ../layouts/biography-main
+		include ../layouts/form
