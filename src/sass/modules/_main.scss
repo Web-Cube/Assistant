@@ -1,13 +1,13 @@
 .main {
-	min-height: 912rem;
+	min-height: 914rem;
 	background: url(/img/main_bg.png) top no-repeat;
 	background-size: auto 100%;
 	padding: 115rem 0 150rem 0;
 	color: #fff;
 	&__header {
 		&-logo {
-			width: 39rem;
-			min-width: 39rem;
+			width: 70rem;
+			min-width: 70rem;
 			margin-right: 30rem;
 			img {
 				display: block;
@@ -71,8 +71,8 @@
 		&__header {
 			justify-content: center;
 			&-logo {
-				width: 39px;
-				min-width: 39px;
+				width: 70px;
+				min-width: 70px;
 				margin-right: 0;
 			}
 			&-nav {
