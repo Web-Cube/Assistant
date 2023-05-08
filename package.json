@@ -43,7 +43,7 @@
     "imagemin-jpegtran": "^6.0.0",
     "imagemin-pngquant": "^8.0.0",
     "imagemin-webp": "^5.1.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "map-stream": "0.0.7",
     "path": "^0.12.7",
     "vinyl-ftp": "^0.6.1",
